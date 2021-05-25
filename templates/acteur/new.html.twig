@@ -1,0 +1,20 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+
+	<title>New Acteur</title>
+	<h1>Créer un acteur.trice</h1>
+	
+{% endblock %}
+
+{% block corps %}
+
+	{{ include('acteur/_form.html.twig') }}
+	
+{% endblock %}
+
+{% block pied %}
+
+	<a href="{{ path('acteur_index') }}">Retour à la liste</a>
+	
+{% endblock %}

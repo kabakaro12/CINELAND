@@ -1,0 +1,25 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+
+	<title>Film</title>
+	Editer un film
+
+{% endblock %}
+
+{% block corps %}
+   
+
+    {{ include('film/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+
+
+    {{ include('film/_delete_form.html.twig') }}
+	
+{% endblock %}
+
+{% block pied %}
+
+    <a href="{{ path('film_index') }}">Retour à la liste</a>
+
+{% endblock %}

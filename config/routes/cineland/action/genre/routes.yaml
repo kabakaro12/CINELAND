@@ -1,0 +1,19 @@
+genre_index:
+   path: /index
+   controller:  App\Controller\cineland\GenreController::index
+   
+genre_new:
+   path: /new
+   controller: App\Controller\cineland\GenreController::new
+
+genre_show:
+    path: /show/{id}
+    controller: App\Controller\cineland\GenreController::show
+    
+genre_edit:
+   path: /edit/{id}
+   controller: App\Controller\cineland\GenreController::edit
+   
+genre_delete:
+    path: /delete/{id}
+    controller: App\Controller\cineland\GenreController::delete

@@ -1,0 +1,26 @@
+acteur_index:
+   path: /index
+   controller: App\Controller\cineland\ActeurController::index
+   
+acteur_new:
+   path: /new
+   controller: App\Controller\cineland\ActeurController::new
+
+acteur_show:
+    path: /show/{id}
+    controller: App\Controller\cineland\ActeurController::show
+    
+acteur_edit:
+   path: /edit/{id}
+   controller: App\Controller\cineland\ActeurController::edit
+   
+acteur_delete:
+    path: /delete/{id}
+    controller: App\Controller\cineland\ActeurController::delete
+    
+acteur_filmSupTrois:
+    path: /filmsuptrois
+    controller: App\Controller\cineland\ActeurController::filmSupTrois  
+acteur_listfilm:
+    path: /listfilm
+    controller: App\Controller\cineland\ActeurController::listfilm

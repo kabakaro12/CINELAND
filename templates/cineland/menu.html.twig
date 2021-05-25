@@ -1,0 +1,66 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+	<title> Menu </title>
+	<h1 ALIGN=Center> Cineland </h1>
+{% endblock %}
+
+{% block corps %}
+	<ul>
+		<li><a href="{{ path('genre_index') }}">Action 1: liste des genres</a></li>
+		
+		<li><a href="{{ path('genre_new') }}">Action 2: créer un genre</a></li>
+		
+		<li><a href="{{ path('acteur_index') }}">Action 3 : liste des acteurs</a></li>
+		
+		<li><a href="{{ path('acteur_index') }}">Action 4 : Afficher les détails d’un acteur (choisir l'acteur.trice à voir dans la liste) </a></li>
+		
+		<li><a href="{{ path('acteur_new') }}">Action 5 :  créer un acteur</a></li>
+		
+		<li><a href="{{ path('acteur_index') }}">Action 6 : modifier un acteur (choisir l'acteur.trice à modifier dans la liste)</a></li>
+		
+		<li><a href="{{ path('acteur_index') }}">Action 7 : supprimer un acteur (choisir l'acteur.trice à supprimer dans la liste)</a></li>
+		
+		<li><a href="{{ path('film_index') }}">Action 8 : liste des films</a></li>
+		
+		<li><a href="{{ path('film_index') }}">Action 9 : Afficher les détails d’un film (choisir le film à voir dans la liste) </a></li>
+		
+		<li><a href="{{ path('film_new') }}">Action 10: créer un film</a></li>
+		
+		<li><a href="{{ path('film_index') }}">Action 11 : modifier un film (choisir le film à modifier dans la liste)</a></li>
+		
+		<li><a href="{{ path('film_index') }}">Action 12 : supprimer un film (choisir le film à supprimer dans la liste)</a></li>
+		
+		<li><a href="{{ path('film_findBetweenDate') }}">Action 13 :  lister les films dont la date de sortie est comprise entre deux années données</a></li>
+		
+		<li><a href="{{ path('film_findInfDate') }}">Action 14 :  lister les films dont la date de sortie est inférieure à l'année donnée</a></li>
+		
+		<li><a href="{{ path('film_findActor') }}">Action 15 :  lister les acteurs d'un film donné</a></li>
+		
+		<li><a href="{{ path('acteur_filmSupTrois') }}">Action 16 : Lister les acteurs qui ont fait au minimum  3 films</a></li>
+		
+		<li>action 17 {# mettre le lien de l'action ici #}</li>
+		
+		<li>action 18 {# mettre le lien de l'action ici #}</li>
+		
+		<li>action 19 {# mettre le lien de l'action ici #}</li>
+		
+		<li><a href="{{ path('acteur_listfilm') }}">action 20: Lister les films fait par acteur dans l'ordre chronologique des date de sorties</a></li>
+		
+		<li>action 21 {# mettre le lien de l'action ici #}</li>
+		
+		<li>action 22 {# mettre le lien de l'action ici #}</li>
+		
+		<li>action 23 <a href="{{ path('ffilm_niveauA') }}">Augmenter ou diminuer la note d’un film</a></li>
+		
+		<li>action 24 {# mettre le lien de l'action ici #}</li>
+		
+		<li>action 25 {# mettre le lien de l'action ici #}</li>
+		
+		<li>action 26 {# mettre le lien de l'action ici #}</li>
+	</ul>
+{% endblock %}
+
+{% block pied %}
+	<a href="{{ path('cineland_accueil') }}">Retour à l'accueil</a>
+{% endblock %}

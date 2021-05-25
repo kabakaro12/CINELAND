@@ -1,0 +1,11 @@
+genre:
+   resource: genre/routes.yaml
+   prefix: /genre
+   
+film:
+   resource: film/routes.yaml
+   prefix: /film
+   
+acteur:
+   resource: acteur/routes.yaml
+   prefix: /acteur

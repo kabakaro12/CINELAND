@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+	<title>Films</title>
+	Liste des acteurs de {{ film.titre }}
+{% endblock %}
+{% block corps %}
+	{% for acteur in film.acteurs %} 
+		<li>{{ acteur }}</li> 
+	{% endfor %}
+{% endblock %}
+{% block pied %}
+
+	<a href="{{ path('cineland_accueil') }}">Retour à l'accueil</a> | 
+	<a href="{{ path('cineland_menu') }}">Menu des actions</a>
+	
+{% endblock %}

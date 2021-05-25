@@ -1,0 +1,42 @@
+film_index:
+   path: /index
+   controller:  App\Controller\cineland\FilmController::index
+   
+film_new:
+   path: /new
+   controller: App\Controller\cineland\FilmController::new
+
+film_show:
+    path: /show/{id}
+    controller: App\Controller\cineland\FilmController::show
+    
+film_edit:
+   path: /edit/{id}
+   controller: App\Controller\cineland\FilmController::edit
+   
+film_delete:
+   path: /delete/{id}
+   controller: App\Controller\cineland\FilmController::delete
+    
+film_findBetweenDate:
+   path: /dateEntredeux
+   controller: App\Controller\cineland\FilmController::dateEntredeux
+   
+   
+film_findInfDate:
+   path: /dateInf
+   controller: App\Controller\cineland\FilmController::dateInf
+   
+film_findActor:
+   path: /ListeActeurs
+   controller: App\Controller\cineland\FilmController::ListeActeurs
+   
+film_findDureeByActor:
+   path: /dureeByActor/
+   controller: App\Controller\cineland\FilmController::dureeByActor
+film_niveauA:
+   path: /niveauA
+   controller: App\Controller\cineland\FilmController::niveauA
+
+   
+   

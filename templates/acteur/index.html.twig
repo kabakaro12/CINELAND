@@ -1,0 +1,47 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+
+	<title>Acteur</title>
+	Listes des acteurs
+	
+{% endblock %}
+{% block corps %}
+ 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom Prenom</th>
+                <th>Date de Naissance</th>
+                <th>Nationalite</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for acteur in acteurs %}
+            <tr>
+                <td>{{ acteur.nomPrenom }}</td>
+                <td>{{ acteur.dateNaissance.format('d-m-Y') }}</td>
+                <td>{{ acteur.nationalite }}</td>
+                <td>
+                    <a href="{{ path('acteur_show', {'id': acteur.id}) }}">voir</a>
+                    <a href="{{ path('acteur_edit', {'id': acteur.id}) }}">éditer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">aucun acteur trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+	<a href="{{ path('acteur_new') }}">Créer un acteur.trice</a>
+{% endblock %}
+
+{% block pied %}
+	
+    
+	<a href="{{ path('cineland_accueil') }}">Retour à l'accueil</a> | 
+	<a href="{{ path('cineland_menu') }}">Menu des actions</a>
+
+{% endblock %}

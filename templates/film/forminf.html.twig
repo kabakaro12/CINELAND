@@ -1,0 +1,15 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+	<title>Films</title>
+	Définissez la date maximal de sortie
+{% endblock %}
+{% block corps %}
+	{{ form(form) }}
+{% endblock %}
+{% block pied %}
+
+	<a href="{{ path('cineland_accueil') }}">Retour à l'accueil</a> | 
+	<a href="{{ path('cineland_menu') }}">Menu des actions</a>
+	
+{% endblock %}

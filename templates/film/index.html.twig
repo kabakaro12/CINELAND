@@ -1,0 +1,53 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+
+	<title>Films</title>
+	Liste des films
+	
+{% endblock %}
+	
+{% block corps %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Durée</th>
+                <th>Date de sortie</th>
+                <th>Note</th>
+                <th>Age minimal</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for film in films %}
+            <tr>
+                <td>{{ film.titre }}</td>
+                <td>{{ film.duree }}</td>
+                <td>{{ film.dateSortie.format('d-m-Y') }}</td>
+                <td>{{ film.note }}</td>
+                <td>{{ film.ageMinimal }}</td>
+                <td>
+                    <a href="{{ path('film_show', {'id': film.id}) }}">voir</a>
+                    <a href="{{ path('film_edit', {'id': film.id}) }}">editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Aucun film trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+	<a href="{{ path('film_new') }}">Créer un nouveau film</a>
+	
+{% endblock %}
+
+{% block pied %}
+
+	
+	<a href="{{ path('cineland_accueil') }}">Retour à l'accueil</a> | 
+	<a href="{{ path('cineland_menu') }}">Menu des actions</a>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+
+{% block titre %}
+
+	<title>Film</title>
+	Creér un film
+	
+{% endblock %}
+
+{% block corps %}
+    
+
+    {{ include('film/_form.html.twig') }}
+
+    
+{% endblock %}
+
+{% block pied %}
+
+	<a href="{{ path('film_index') }}">Retour à la liste</a>
+
+{% endblock %}
